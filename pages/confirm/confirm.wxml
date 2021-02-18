@@ -1,0 +1,78 @@
+<!--pages/confirm/confirm.wxml-->
+<view class="container confirm--bg">
+  <image src="{{room.img}}"></image>
+  <view class=" confirm__block">
+    <text class="confirm__text">{{room.text}}</text>
+    <view class="l-flex">
+      <view>
+        <text class="confirm__price">￥{{room.price}}元 / 晚</text>
+      </view>
+      <view>
+        <view class="confirm__control">
+          <image 
+            wx:if="{{number > 1}}" 
+            class="confirm__icon" 
+            src="../../image/minus.png"
+            bindtap="minusNumber"
+          ></image>
+          <text class="confirm__number">{{number}}</text>
+          <image 
+            class="confirm__icon" 
+            src="../../image/plus.png"
+            bindtap="addNumber"
+          ></image>
+        </view>
+      </view>
+    </view>
+    <view>
+      <text class="confirm__title">预订时间</text>
+      <view class="confirm__picker--wrap">
+        <picker 
+          class="confirm__picker" 
+          value="{{date.start}}" start="{{today}}" 
+          bindchange="startDateChange" 
+          mode="date">
+          <view class="confirm__date">
+            <text class="confirm__date--text"> {{date.start}}</text>
+          </view>
+        </picker>
+        <text>-</text>
+        <picker 
+          class="confirm__picker" 
+          value="{{date.end}}" 
+          start="{{date.start}}" 
+          bindchange="endDateChange" 
+          mode="date">
+          <view class="confirm__date">
+            <text class="confirm__date--text">{{date.end}}</text>
+          </view>
+        </picker>
+        <text>{{date.reservation_during}} 晚</text>
+      </view>
+    </view>
+  </view>
+  <view class="confirm__block">
+    <text class="confirm__title">房型信息</text>
+    <view class="l-flex--option">
+        <text class="confirm__option">床型 {{room.typeText}}</text>
+        <text class="confirm__option">可住 {{room.number}}人</text>
+        <text class="confirm__option">浴室 {{room.showerText}}</text>
+        <text class="confirm__option">电视 {{room.tvText}}</text>
+        <text class="confirm__option">窗户 {{room.windowText}}</text>
+    </view>
+  </view>
+  <view class="confirm__block">
+    <text class="confirm__title">服务设施</text>
+    <view class="l-flex--option">
+        <text wx:for="{{room.optionsArray}}" wx:key="index" class="confirm__option">{{item}}</text>
+    </view>
+  </view>
+  <view class="confirm__bar">
+    <view class="confirm__total--wrap">
+      <text class="confirm__total">￥{{total}}元</text>
+    </view>
+    <view class="confirm__reserve--wrap">
+      <text class="confirm__reserve">立即预订</text>
+    </view>
+  </view>
+</view>
