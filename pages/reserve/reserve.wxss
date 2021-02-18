@@ -1,0 +1,62 @@
+/* pages/reserve/reserve.wxss */
+.reserve__wrap {
+  padding: 32rpx;
+}
+
+.reserve__item {
+  width: 95%;
+  height: 250rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.reserve__patch {
+  width: 185rpx;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.reserve__text {
+  display: block;
+  font-size: 36rpx;
+  margin-top: 40rpx;
+}
+
+.reserve__option {
+  display: inline-block;
+  color: #909399;
+  font-size: 30rpx;
+  margin-left: 8rpx;
+  margin-top: 16rpx;
+}
+
+.reserve__img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.reserve__price {
+  display: block;
+  color: #F56C6C;
+  font-size: 36rpx;
+  margin-top: 40rpx;
+}
+
+.reserve__btn {
+  width: 60rpx;
+  height: 40rpx;  
+  padding: 12rpx 42rpx;
+  font-size: 30rpx;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #5eaeff;
+  position: absolute;
+  bottom: 24rpx;
+  right: 24rpx;
+}

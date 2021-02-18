@@ -1,0 +1,17 @@
+<!--pages/reserve/reserve.wxml-->
+<view class="container">
+  <view class="reserve__wrap">
+    <view class="reserve__item" wx:for="{{roomIntro}}"  wx:key="item">
+      <image class="reserve__img" src="{{item.img}}"></image>
+      <view class="reserve__patch">
+        <text class="reserve__text">{{item.text}}</text>
+        <text wx:if="{item.shower}" class="reserve__option">浴室</text>
+        <text wx:if="{item.tv}" class="reserve__option">电视</text>
+      </view>
+      <view class="reserve__patch">
+        <text class="reserve__price">￥{{item.price}}元</text>
+        <text class="reserve__btn" bindtap="toConfirm" data-index="{{index}}">预订</text>
+      </view>
+    </view>
+  </view>
+</view>
