@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/reserve/reserve",
+    "pages/my/my",
+    "pages/confirm/confirm"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "喵之庭",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+        {
+            "pagePath": "pages/home/home",
+            "text": "首页",
+            "iconPath": "image/home.png",
+            "selectedIconPath": "image/home_selected.png"
+        },
+        {
+            "pagePath": "pages/reserve/reserve",
+            "text": "预订",
+            "iconPath": "image/reserve.png",
+            "selectedIconPath": "image/reserve_selected.png"
+        },
+        {
+            "pagePath": "pages/my/my",
+            "text": "我的",
+            "iconPath": "image/my.png",
+            "selectedIconPath": "image/my_selected.png"
+        }
+    ],
+    "position": "bottom",
+    "color": "#bfbfbf",
+    "selectedColor": "#409eff",
+    "backgroundColor": "white"
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
