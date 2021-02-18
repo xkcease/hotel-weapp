@@ -1,0 +1,25 @@
+<!--home.wxml-->
+<view class="container home--bg">
+  <image src="{{hotelIntro.img}}"></image>
+  <view class="home__block">
+    <text class="home__title">精选房间</text>
+    <view class="home__list">
+      <view class="home__item" wx:for="{{roomIntro}}" wx:key="item">
+        <image class="home__img" src="{{item.img}}"></image>
+        <text class="home__text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="home__block">
+    <text class="home__title">酒店详情</text>
+    <view class="home-m-l">
+      <text class="home__intro">{{hotelIntro.intro}}</text>
+    </view>
+    <view class="home__detail home-m-l">
+      <text wx:for="{{hotelIntro.optionsArray}}" wx:key="index" class="home__option">{{item}}</text>
+      <text class="home__cell">地址：{{hotelIntro.address}}</text>
+      <text class="home__cell">联系方式：{{hotelIntro.contact}}</text>
+    </view>
+  </view>
+
+</view>

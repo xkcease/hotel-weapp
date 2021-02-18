@@ -1,0 +1,79 @@
+/**home.wxss**/
+.home--bg {
+  background-color: #f3f5f7;
+}
+
+.home__block {
+  margin-top: 10rpx;
+  margin-bottom: 12rpx;
+  padding: 16rpx;
+  background-color: #fff;
+}
+
+.home-m-l {
+  margin-left: 24rpx;
+}
+
+.home__title {
+  display: block;
+  color: #909399;
+  border-left: 8rpx solid #409eff;
+  padding-left: 6rpx;
+  margin-bottom: 12rpx;
+}
+
+.home__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.home__item {
+  width: 355rpx;
+  height: 355rpx;
+  position: relative;
+  margin-bottom: 12rpx;
+}
+
+.home__img {
+  width: 100%;
+  height: 100%;
+}
+
+.home__text {
+  display: block;
+  width: 100%;
+  padding: 10rpx 0;
+  text-align: center;
+  background-color: rgb(1, 1, 1, 0.4);
+  color: #909399;
+  position: absolute;
+  bottom: 0;
+}
+
+.home__intro {
+  line-height: 32rpx;
+  font-weight: 530;
+}
+
+.home__detail {
+  margin-top: 12rpx;
+}
+
+.home__option {
+  color: #F56C6C;
+  font-weight: 550;
+  margin-left: 24rpx;
+  line-height: 64rpx;
+  font-size: 30rpx;
+}
+
+.home__cell {
+  display: block;
+  font-weight: 550;
+  line-height: 64rpx;
+}
+
+
+
+
