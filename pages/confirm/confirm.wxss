@@ -103,7 +103,7 @@
   position: fixed;
   bottom: 0;
   height: 100rpx;
-  background-color: #331d3a;
+  background-color: #211425;
   font-size: 36rpx;
 }
 
@@ -118,13 +118,11 @@
   color: #409eff;
 }
 
-.confirm__reserve--wrap {
+.confirm__reserve {
+  display: inline-block;
   width: 200rpx;
-  height: 100%;
+  height: 100rpx;
   text-align: center;
   background-color: #409eff;
-}
-
-.confirm__reserve--wrap {
   line-height: 100rpx;
 }

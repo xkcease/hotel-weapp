@@ -71,8 +71,6 @@
     <view class="confirm__total--wrap">
       <text class="confirm__total">￥{{total}}元</text>
     </view>
-    <view class="confirm__reserve--wrap">
-      <text class="confirm__reserve">立即预订</text>
-    </view>
+      <text class="confirm__reserve" bindtap="reserve">立即预订</text>
   </view>
 </view>
