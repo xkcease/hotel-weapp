@@ -1,0 +1,31 @@
+/* pages/login/login.wxss */
+.my__profile {
+  display: flex;
+  height: 200rpx;
+  align-items: center;
+  padding: 24rpx;
+  background-color: #f7f8fa;
+}
+
+.my__avatar {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50px;
+}
+
+.my__login {
+  margin: 0;
+  margin-left: 24rpx;
+}
+
+.my__name {
+  margin-left: 24rpx;
+}
+
+.my__tip {
+  display: block;
+  margin-left: 24rpx;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #909399;
+}

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="my__profile">
+    <image class="my__avatar" src="{{avatarUrl}}"></image>
+    <button wx:if="{{!hasUserInfo}}" class="my__login" plain="true" size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <view wx:else>
+      <text class="my__name">{{userInfo.nickName}}</text>
+      <text wx:if="{{!hasPhone}}" class="my__tip" bindtap="open">绑定手机号 ></text>
+    </view>
+  </view>
+
+  <mp-half-screen-dialog 
+  bindbuttontap="buttontap"
+  show="{{show}}"
+  title="绑定手机号" 
+  >
+  <text slot="desc">预订酒店房间需要手机号，为确保正常使用，请您绑定手机号</text>
+  <button type="primary" slot="footer" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号</button>
+  </mp-half-screen-dialog>
+</view>
+
