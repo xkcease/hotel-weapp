@@ -20,10 +20,15 @@ function getPriceRequest() {
   return getRequest('/getPrice');
 }
 
+function reserveRequest(obj) {
+  return postRequest('/reserve', {...obj});
+}
+
 module.exports = {
   loginUserRequest,
   getPhoneRequest,
   getHotelIntroRequest,
   getAllRoomIntrosRequest,
   getPriceRequest,
+  reserveRequest,
 };
