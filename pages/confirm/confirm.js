@@ -62,6 +62,7 @@ Page({
   },
   reserve() {
     let data = {
+      number: this.data.number,
       sessionId: wx.getStorageSync('sessionId'),
       reservation_time: this.data.date.reservation_time,
       reservation_during: this.data.date.reservation_during,
