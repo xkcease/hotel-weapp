@@ -1,6 +1,7 @@
 # 酒店预订系统-微信小程序
 该仓库为酒店预订系统的微信小程序，其Vue后台和Node.js服务端如下：
-> [Vue前台](https://github.com/xkcease/hotel-management)
+> [Vue前台](https://github.com/xkcease/hotel-management)  
+
 > [Node.js服务端](https://github.com/xkcease/hotel-server)
 
 ## 功能
