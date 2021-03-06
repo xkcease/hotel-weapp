@@ -21,7 +21,15 @@ function getPriceRequest() {
 }
 
 function reserveRequest(obj) {
-  return postRequest('/reserve', {...obj});
+  return postRequest('/reserve', { ...obj });
+}
+
+function getUserOrdersRequest(sessionId, state) {
+  return getRequest('/getUserOrders', { sessionId, state });
+}
+
+function deleteOrderRequest(oid, rid) {
+  return postRequest('/deleteOrder', { oid, rid });
 }
 
 module.exports = {
@@ -31,4 +39,6 @@ module.exports = {
   getAllRoomIntrosRequest,
   getPriceRequest,
   reserveRequest,
+  getUserOrdersRequest,
+  deleteOrderRequest,
 };
