@@ -1,0 +1,53 @@
+<!--pages/order/order.wxml-->
+<view class="container bg">
+  <view class="tabbar" catchtap="changeTab">
+    <text class="tabbar__item {{index === 3 ? 'tabbar__item--select' : ''}}" data-index="3">全部</text>
+    <text class="tabbar__item {{index === 0 ? 'tabbar__item--select' : ''}}" data-index="0">未入住</text>
+    <text class="tabbar__item {{index === 1 ? 'tabbar__item--select' : ''}}" data-index="1">已入住</text>
+    <text class="tabbar__item {{index === 2 ? 'tabbar__item--select' : ''}}" data-index="2">已完成</text>
+  </view>
+  <view class="tab">
+    <view class="order__block" wx:for="{{orderList}}" wx:key="oid" bindtap="toOrderDetail" data-oid="{{ item.oid }}">
+      <view class="order--flex">
+        <text>订单编号：{{ item.oid }}</text>
+        <text class="order__state">{{ item.stateText }}</text>
+      </view>
+      <view class="order--flex order__content">
+        <image src="{{ item.img }}" class="order__img"></image>
+        <view class="order__detail">
+          <view class="order__detail--cell">
+            <text class="order__text">{{ item.text }}</text>
+            <text>{{ item.reservationDate }}</text>
+          </view>
+          <view class="order__detail--cell m-t-p20">
+            <text>￥{{ item.price }}</text>
+            <text>{{ item.reservation_during }} 晚</text>
+          </view>
+        </view>
+      </view>
+      <view class="order--flex">
+        <text>金额：￥{{ item.total }}</text>
+        <view>
+          <text 
+          wx:if="{{ item.state === 0 }}" 
+          class="order__btn order__btn--warn"
+          catchtap="deleteOrder"
+          data-oid="{{ item.oid }}"
+          >取消订单</text>
+          <text 
+            wx:if="{{ item.state === 0 }}" 
+            class="order__btn order__btn--info"
+            catchtap="modifyOrder"
+          >修改订单</text>
+          <text 
+          wx:if="{{ item.state === 2 }}" 
+          class="order__btn order__btn--warn"
+          catchtap="deleteOrder"
+          data-oid="{{ item.oid }}"
+          data-rid="{{ item.rid }}"
+          >删除订单</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
