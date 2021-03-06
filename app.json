@@ -3,7 +3,9 @@
     "pages/home/home",
     "pages/reserve/reserve",
     "pages/my/my",
-    "pages/confirm/confirm"
+    "pages/confirm/confirm",
+    "pages/order/order",
+    "pages/orderDetail/orderDetail"
   ],
   "window":{
     "backgroundTextStyle":"light",
