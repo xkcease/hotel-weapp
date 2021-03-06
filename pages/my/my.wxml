@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container my__bg">
   <view class="my__profile">
     <image class="my__avatar" src="{{avatarUrl}}"></image>
     <button wx:if="{{!hasUserInfo}}" class="my__login" plain="true" size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
@@ -6,6 +6,29 @@
       <text class="my__name">{{userInfo.nickName}}</text>
       <text wx:if="{{!hasPhone}}" class="my__tip" bindtap="open">绑定手机号 ></text>
     </view>
+  </view>
+  <view class="my__block">
+      <view class="my__options--head">
+        <text>我的订单</text>
+        <view bindtap="toOrder" data-state="3">
+          <text class="my__arrow--text">查看全部订单</text>
+          <mp-icon icon="arrow" color="#e6e6e6" size="{{12}}"></mp-icon>
+        </view>
+      </view>
+      <view class="my__options">
+        <view bindtap="toOrder" data-state="0">
+          <image class="my__icon" src="../../image/reserved.png"></image>
+          <text>未入住</text>
+        </view>
+        <view bindtap="toOrder" data-state="1">
+          <image class="my__icon" src="../../image/occupied.png"></image>
+          <text>已入住</text>
+        </view>
+        <view bindtap="toOrder" data-state="2">
+          <image class="my__icon" src="../../image/completed.png"></image>
+          <text>已完成</text>
+        </view>
+      </view>
   </view>
 
   <mp-half-screen-dialog 

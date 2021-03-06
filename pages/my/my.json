@@ -1,6 +1,9 @@
 {
   "usingComponents": {
     "mp-half-screen-dialog": "weui-miniprogram/half-screen-dialog/half-screen-dialog",
-    "mp-toptips": "weui-miniprogram/toptips/toptips"
+    "mp-toptips": "weui-miniprogram/toptips/toptips",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-icon": "weui-miniprogram/icon/icon"
   }
 }

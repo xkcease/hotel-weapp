@@ -1,10 +1,15 @@
 /* pages/login/login.wxss */
+.my__bg {
+  height: 100vh;
+  background-color: #f7f8fa;
+}
+
 .my__profile {
   display: flex;
   height: 200rpx;
   align-items: center;
   padding: 24rpx;
-  background-color: #f7f8fa;
+  background-color: #fff;
 }
 
 .my__avatar {
@@ -28,4 +33,39 @@
   margin-top: 12rpx;
   font-size: 24rpx;
   color: #909399;
+}
+
+.my__block {
+  margin: 24rpx;
+  padding: 24rpx;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.my__options--head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my__arrow--text {
+  font-size: 24rpx;
+  color: #909399;
+}
+
+.my__options {
+  display: flex;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #909399;
+  text-align: center;
+  margin-top: 20rpx;
+  padding-top: 24rpx;
+  border-top: 1rpx solid #e6e6e6;
+}
+
+.my__icon {
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 12rpx;
 }

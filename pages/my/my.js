@@ -75,5 +75,10 @@ Page({
     this.setData({
       show: true
     });
+  },
+  toOrder(e) {
+    wx.navigateTo({
+      url: '../order/order?state=' + e.currentTarget.dataset.state,
+    })
   }
 });
