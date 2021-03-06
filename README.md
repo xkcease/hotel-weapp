@@ -10,7 +10,8 @@
 3.	预订页
 4.	详细 
 5.	我的
-6.	to be continued
+6.	订单列表
+7.  to be continued
 
 ## 目录
 ```shell
@@ -18,23 +19,30 @@ hotel-weapp
 │  app.js
 │  app.json
 │  app.wxss
+│  LICENSE
 │  project.config.json
 │  README.md
 │  sitemap.json
 │
 ├─image
 │      avatar.png
+│      completed-icon.png
+│      completed.png
 │      home.png
 │      home_selected.png
 │      minus.png
 │      my.png
 │      my_selected.png
+│      occupied-icon.png
+│      occupied.png
 │      plus.png
 │      reserve.png
+│      reserved-icon.png
+│      reserved.png
 │      reserve_selected.png
 │
 ├─pages
-│  ├─confirm                      
+│  ├─confirm
 │  │      confirm.js
 │  │      confirm.json
 │  │      confirm.wxml
@@ -52,6 +60,18 @@ hotel-weapp
 │  │      my.wxml
 │  │      my.wxss
 │  │
+│  ├─order
+│  │      order.js
+│  │      order.json
+│  │      order.wxml
+│  │      order.wxss
+│  │
+│  ├─orderDetail
+│  │      orderDetail.js
+│  │      orderDetail.json
+│  │      orderDetail.wxml
+│  │      orderDetail.wxss
+│  │
 │  └─reserve
 │          reserve.js
 │          reserve.json
@@ -59,9 +79,9 @@ hotel-weapp
 │          reserve.wxss
 │
 └─utils
-        dateTool.js                      // 日期格式工具
-        http.js                          // axios封装
-        request.js                       // 请求封装
+        dateTool.js
+        http.js
+        request.js
         util.js
 ```
 
