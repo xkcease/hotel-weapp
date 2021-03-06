@@ -28,15 +28,22 @@ Page({
     });
   },
   startDateChange: function(e) {
+    let startTime = new Date(e.detail.value).getTime();
+    let endTime = new Date(this.data.date.end).getTime();
+    let during = (endTime - startTime) / 86400000
+
     this.setData({
-      ['date.start']: e.detail.value
+      ['date.start']: e.detail.value,
+      ['date.reservation_time']: startTime,
+      ['date.reservation_during']: during,
+      total: this.data.number * this.data.room.price * during,
     })
   },
   endDateChange: function(e) {
-    let startTime = new Date(this.data.date.start);
-    let endTime = new Date(e.detail.value);
+    let startTime = new Date(this.data.date.start).getTime();
+    let endTime = new Date(e.detail.value).getTime();
     let during = (endTime - startTime) / 86400000
-
+    
     this.setData({
       ['date.end']: e.detail.value,
       ['date.reservation_time']: startTime,
@@ -68,7 +75,18 @@ Page({
       reservation_during: this.data.date.reservation_during,
       type: this.data.room.type,
     };
-    
+
+    if (data.reservation_during < 1) {
+      wx.showToast({
+        title: '不能小于1晚',
+        icon: 'error',
+        duration: 800
+      });
+      return;
+    }
+
+    console.log(data);
+    console.log(this.data.date);
     wx.showLoading({title: '加载中'});
 
     reserveRequest(data).then(res => {
@@ -86,6 +104,6 @@ Page({
         icon: 'error',
         duration: 600
       });
-    })
+    });
   },
 })
