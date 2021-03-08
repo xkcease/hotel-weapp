@@ -1,0 +1,85 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<view class="container bg">
+  <view class="order-detail__head">
+    <image class="order-detail__icon" src="{{ order.imgUrl }}"></image>
+    <text class="order-detail__state">{{ order.stateText }}</text>
+  </view>
+  <view class="order__info">
+    <view class="order--flex cell">
+      <text class="cell-label">下单用户：</text>
+      <text>{{ userInfo.nickName }}</text>
+    </view>
+    <view class="order--flex cell">
+      <text class="cell-label">联系方式：</text>
+      <text>{{ order.contact }}</text>
+    </view>
+  </view>
+  <view class="m-b-180">
+    <view class="order__block">
+      <view class="order--flex">
+        <text>商品信息</text>
+      </view>
+      <view class="order--flex order__content">
+        <image src="{{ order.img }}" class="order__img"></image>
+        <view class="order__detail">
+          <view class="order__detail--cell">
+            <text class="order__text">{{ order.text }}</text>
+            <text>{{ order.reservationDate }}</text>
+          </view>
+          <view class="order__detail--cell m-t-p20">
+            <text>￥{{ order.price }}</text>
+            <text>{{ order.reservation_during }} 晚</text>
+          </view>
+        </view>
+      </view>
+      <view class="order--flex">
+        <text>金额：￥{{ order.total }}</text>
+      </view>
+    </view>
+    <view class="order__block">
+      <view class="order--flex cell-head">
+        <text>订单信息</text>
+      </view>
+      <view class="order--flex cell">
+        <text class="cell-label">订单编号：</text>
+        <text>{{ order.oid }}</text>
+      </view>
+      <view class="order--flex cell">
+        <text class="cell-label">下单时间：</text>
+        <text>{{ order.placeDate }}</text>
+      </view>
+      <view class="order--flex cell" wx:if="{{ order.state !== 0 }}">
+        <text class="cell-label">入住时间：</text>
+        <text>{{ order.checkInDate }}</text>
+      </view>
+      <view class="order--flex cell" wx:if="{{ order.state === 2 }}">
+        <text class="cell-label">退房时间：</text>
+        <text>{{ order.checkOutDate }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="order--flex footer">
+    <text>金额：￥{{ order.total }}</text>
+    <view>
+      <text 
+      wx:if="{{ order.state === 0 }}" 
+      class="order__btn order__btn--warn"
+      catchtap="deleteOrder"
+      data-oid="{{ order.oid }}"
+      >取消订单</text>
+      <text 
+        wx:if="{{ order.state === 0 }}" 
+        class="order__btn order__btn--info"
+        catchtap="modifyOrder"
+        data-oid="{{ order.oid }}"
+      >修改订单</text>
+      <text 
+        wx:if="{{ order.state === 2 }}" 
+        class="order__btn order__btn--warn"
+        catchtap="deleteOrder"
+        data-oid="{{ order.oid }}"
+        data-rid="{{ order.rid }}"
+      >删除订单</text>
+    </view>
+  </view>
+</view>
