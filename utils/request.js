@@ -28,6 +28,10 @@ function getUserOrdersRequest(sessionId, state) {
   return getRequest('/getUserOrders', { sessionId, state });
 }
 
+function getUserOrderRequest(sessionId, oid) {
+  return getRequest('/getUserOrder', { sessionId, oid });
+}
+
 function deleteOrderRequest(oid, rid) {
   return postRequest('/deleteOrder', { oid, rid });
 }
@@ -40,5 +44,6 @@ module.exports = {
   getPriceRequest,
   reserveRequest,
   getUserOrdersRequest,
+  getUserOrderRequest,
   deleteOrderRequest,
 };
