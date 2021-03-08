@@ -1,25 +1,36 @@
 <!--home.wxml-->
 <view class="container home--bg">
-  <image src="{{hotelIntro.img}}"></image>
-  <view class="home__block">
-    <text class="home__title">精选房间</text>
-    <view class="home__list">
-      <view class="home__item" wx:for="{{roomIntro}}" wx:key="item">
-        <image class="home__img" src="{{item.img}}"></image>
-        <text class="home__text">{{item.text}}</text>
+  <view class="home__head">
+    <swiper class="home__swiper" indicator-dots="{{ true }}" indicator-active-color="#99CCCC">
+      <swiper-item>
+        <image class="home__img" src="{{ hotelIntro.img }}"></image>
+      </swiper-item>
+    </swiper>
+    <view>
+      <view class="home--flex">
+        <text>{{ hotelIntro.name }}</text>
+        <text bindtap="toReserve" class="home__btn">预订</text>
+      </view>
+      <view class="l-flex">
+        <image class="home__icon" src="/image/location.png"></image>
+        <text>{{ hotelIntro.address }}</text>
+      </view>
+      <view class="l-flex">
+        <image class="home__icon" src="/image/contact.png"></image>
+        <text>{{ hotelIntro.contact }}</text>
       </view>
     </view>
   </view>
   <view class="home__block">
-    <text class="home__title">酒店详情</text>
+    <text class="home__title">酒店介绍</text>
     <view class="home-m-l">
       <text class="home__intro">{{hotelIntro.intro}}</text>
     </view>
+  </view>
+  <view class="home__block">
+    <text class="home__title">酒店设施</text>
     <view class="home__detail home-m-l">
-      <text wx:for="{{hotelIntro.optionsArray}}" wx:key="index" class="home__option">{{item}}</text>
-      <text class="home__cell">地址：{{hotelIntro.address}}</text>
-      <text class="home__cell">联系方式：{{hotelIntro.contact}}</text>
+        <text wx:for="{{hotelIntro.optionsArray}}" wx:key="index" class="home__option">{{item}}</text>
     </view>
   </view>
-
 </view>

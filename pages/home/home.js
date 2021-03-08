@@ -17,7 +17,6 @@ Page({
         })
       }
     })
-
     getHotelIntroRequest().then(res => {
       if (res.state) {
         res.hotelIntro.optionsArray = res.hotelIntro.options.split(';');
@@ -31,4 +30,9 @@ Page({
       }
     });
   },
+  toReserve() {
+    wx.switchTab({
+      url: '/pages/reserve/reserve'
+    })
+  }
 })
