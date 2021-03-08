@@ -1,9 +1,4 @@
 /* pages/order/order.wxss */
-.bg {
-  height: 100vh;
-  background-color: #f7f8fa;
-}
-
 .tabbar {
   display: flex;
   height: 64rpx;

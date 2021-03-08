@@ -38,13 +38,14 @@
             wx:if="{{ item.state === 0 }}" 
             class="order__btn order__btn--info"
             catchtap="modifyOrder"
+            data-oid="{{ item.oid }}"
           >修改订单</text>
           <text 
-          wx:if="{{ item.state === 2 }}" 
-          class="order__btn order__btn--warn"
-          catchtap="deleteOrder"
-          data-oid="{{ item.oid }}"
-          data-rid="{{ item.rid }}"
+            wx:if="{{ item.state === 2 }}" 
+            class="order__btn order__btn--warn"
+            catchtap="deleteOrder"
+            data-oid="{{ item.oid }}"
+            data-rid="{{ item.rid }}"
           >删除订单</text>
         </view>
       </view>

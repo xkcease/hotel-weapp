@@ -23,7 +23,9 @@ Page({
     });
   },
   modifyOrder(e) {
-    
+    wx.navigateTo({
+      url: '../pay/pay?oid=' + e.currentTarget.dataset.oid,
+    });
   },
   deleteOrder(e) {
     wx.showModal({
@@ -84,7 +86,7 @@ Page({
   },
   toOrderDetail(e) {
     wx.navigateTo({
-      url: '../orderDetail/orderDetail?=oid' + e.currentTarget.dataset.oid,
-    })
+      url: '../orderDetail/orderDetail?oid=' + e.currentTarget.dataset.oid,
+    });
   }
 })
