@@ -62,7 +62,7 @@
     <view class="pay__total--wrap">
       <text class="pay__total">￥{{total}}元</text>
     </view>
-      <text class="pay__reserve" bindtap="reserve">立即预订</text>
+      <text class="pay__reserve" bindtap="reserve">{{ oid ? '修改订单' : '立即预订' }}</text>
   </view>
 </view>
 

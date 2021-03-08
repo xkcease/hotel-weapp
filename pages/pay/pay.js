@@ -28,6 +28,7 @@ Page({
           ['date.end']: getFormatNextDate(res.reservation_time, res.reservation_during),
           ['date.reservation_time']: res.reservation_time,
           ['date.reservation_during']: res.reservation_during,
+          number: res.number,
           oid: options.oid,
         });
       });
@@ -121,10 +122,12 @@ Page({
         duration: 600
       });
 
-      wx.switchTab({
-        url: '/pages/reserve/reserve'
-      });
-    }).catch(err => {
+      if (res.state) {
+        wx.switchTab({
+          url: '/pages/reserve/reserve'
+        });
+      }
+      }).catch(err => {
       console.log(err);
       wx.showToast({
         title: '失败',
