@@ -1,0 +1,115 @@
+/* pages/pay/pay.wxss */
+
+.pay__cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 36rpx;
+  padding: 24rpx 12rpx;
+  border-bottom: 1rpx solid #EBEEF5;
+}
+
+.bg--w {
+  background-color: #fff;
+}
+
+.bg--h {
+  height: 200rpx;
+}
+
+.pay__control {
+  display: flex;
+  align-items: center;
+}
+
+.pay__number {
+  font-size: 42rpx;
+  margin: 0 12rpx;
+}
+
+.pay__icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.pay__title {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 530;
+  line-height: 64rpx;
+  margin-top: 24rpx;
+  margin-bottom: 12rpx;
+}
+
+.pay__picker--wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12rpx 0;
+}
+
+.icon-arrow {
+  width: 200rpx;
+  height: 20rpx;
+}
+
+.pay__picker--text {
+  font-size: 30rpx;
+  color: #909399;
+}
+
+.pay__during {
+  font-size: 30rpx;
+  color: #409EFF;
+}
+
+.pay__date {
+  display: inline-block;
+  color: #409eff;
+  width: 250rpx;
+  height: 60rpx;
+  text-align: center;
+}
+
+.pay__date--text {
+  font-size: 36rpx;
+  line-height: 60rpx;
+}
+
+.pay__input {
+  text-align: right;
+}
+
+
+.pay__bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  background-color: #fff;
+  font-size: 36rpx;
+}
+
+.pay__total--wrap {
+  width: 100rpx;
+  height: 100%;
+  margin-left: 24rpx;
+}
+
+.pay__total {
+  line-height: 100rpx;
+  color: #F56C6C;
+}
+
+.pay__reserve {
+  display: inline-block;
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  background-color: #409eff;
+  line-height: 100rpx;
+  color: #fff;
+}

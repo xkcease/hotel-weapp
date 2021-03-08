@@ -1,0 +1,68 @@
+<!--pages/pay/pay.wxml-->
+<view class="container bg">
+  <view class="bg--w pay__cell">
+    <text>{{ room.text }}</text>
+  </view>
+  <view class="bg--w pay__cell">
+    <view class="pay__picker--wrap">
+      <text class="pay__picker--text">入住时间</text>
+      <picker 
+        class="pay__picker" 
+        value="{{date.start}}" start="{{today}}" 
+        bindchange="startDateChange" 
+        mode="date"
+      >
+        <view class="pay__date">
+          <text class="pay__date--text"> {{date.start}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="pay__picker--wrap">
+      <text class="pay__during">{{date.reservation_during}} 晚</text>
+      <image src="/image/arrow-right.png" class="icon-arrow"></image>
+    </view>
+    <view class="pay__picker--wrap">
+      <text class="pay__picker--text">退房时间</text>
+      <picker 
+        class="pay__picker" 
+        value="{{date.end}}" 
+        start="{{date.start}}" 
+        bindchange="endDateChange" 
+        mode="date"
+      >
+        <view class="pay__date">
+          <text class="pay__date--text">{{date.end}}</text>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="bg--w pay__cell">
+    <text>预订间数</text>
+    <view class="pay__control">
+      <image 
+        wx:if="{{number > 1}}" 
+        class="pay__icon" 
+        src="../../image/minus.png"
+        bindtap="minusNumber"
+      ></image>
+      <text class="pay__number">{{number}}</text>
+      <image 
+        class="pay__icon" 
+        src="../../image/plus.png"
+        bindtap="addNumber"
+      ></image>
+    </view>
+  </view>
+  <view class="bg--w pay__cell">
+      <text>手机号</text>
+      <input  model:value="{{ phone }}" placeholder="请输入手机号" class="pay__input" />
+  </view>
+  <view class="bg--w bg--h"></view>
+  <view class="pay__bar">
+    <view class="pay__total--wrap">
+      <text class="pay__total">￥{{total}}元</text>
+    </view>
+      <text class="pay__reserve" bindtap="reserve">立即预订</text>
+  </view>
+</view>
+
