@@ -3,23 +3,7 @@ const app = getApp()
 
 Page({
   data: {
-    rooms: [
-      {
-        imgUrl: '../../image/king_room.jpg',
-        text: '温馨大床房',
-        price: 200,
-      },
-      {
-        imgUrl: '../../image/single_room.jpg',
-        text: '静谧单人间',
-        price: 100,
-      },
-      {
-        imgUrl: '../../image/double_room.jpg',
-        text: '舒适双人间',
-        price: 150,
-      },
-    ],
+    roomIntro: [],
   },
   onLoad() {
     wx.getStorage({
@@ -33,7 +17,12 @@ Page({
   },
   toConfirm(e) {
     wx.navigateTo({
-      url: '../confirm/confirm?index=' + e.target.dataset.index,
-    })
-  }
+      url: '../confirm/confirm?index=' + e.currentTarget.dataset.index,
+    });
+  },
+  toPay(e) {
+    wx.navigateTo({
+      url: '../pay/pay?type=' + e.target.dataset.type,
+    });
+  },
 })

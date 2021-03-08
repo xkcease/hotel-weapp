@@ -1,7 +1,7 @@
 <!--pages/reserve/reserve.wxml-->
 <view class="container">
   <view class="reserve__wrap">
-    <view class="reserve__item" wx:for="{{roomIntro}}"  wx:key="item">
+    <view class="reserve__item" bindtap="toConfirm" data-index="{{index}}" wx:for="{{roomIntro}}"  wx:key="item">
       <image class="reserve__img" src="{{item.img}}"></image>
       <view class="reserve__patch">
         <text class="reserve__text">{{item.text}}</text>
@@ -10,7 +10,7 @@
       </view>
       <view class="reserve__patch">
         <text class="reserve__price">￥{{item.price}}元</text>
-        <text class="reserve__btn" bindtap="toConfirm" data-index="{{index}}">预订</text>
+        <text class="reserve__btn" catchtap="toPay" data-type="{{item.type}}">预订</text>
       </view>
     </view>
   </view>
