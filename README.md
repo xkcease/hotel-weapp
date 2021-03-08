@@ -11,7 +11,9 @@
 4.	详细 
 5.	我的
 6.	订单列表
-7.  to be continued
+7.  订单详细
+8.  确认预订
+9.  to be continued
 
 ## 目录
 ```shell
@@ -25,11 +27,14 @@ hotel-weapp
 │  sitemap.json
 │
 ├─image
+│      arrow-right.png
 │      avatar.png
 │      completed-icon.png
 │      completed.png
+│      contact.png
 │      home.png
 │      home_selected.png
+│      location.png
 │      minus.png
 │      my.png
 │      my_selected.png
@@ -71,6 +76,12 @@ hotel-weapp
 │  │      orderDetail.json
 │  │      orderDetail.wxml
 │  │      orderDetail.wxss
+│  │
+│  ├─pay
+│  │      pay.js
+│  │      pay.json
+│  │      pay.wxml
+│  │      pay.wxss
 │  │
 │  └─reserve
 │          reserve.js
