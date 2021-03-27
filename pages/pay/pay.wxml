@@ -39,18 +39,7 @@
   <view class="bg--w pay__cell">
     <text>预订间数</text>
     <view class="pay__control">
-      <image 
-        wx:if="{{number > 1}}" 
-        class="pay__icon" 
-        src="../../image/minus.png"
-        bindtap="minusNumber"
-      ></image>
       <text class="pay__number">{{number}}</text>
-      <image 
-        class="pay__icon" 
-        src="../../image/plus.png"
-        bindtap="addNumber"
-      ></image>
     </view>
   </view>
   <view class="bg--w pay__cell">
