@@ -1,7 +1,8 @@
 <view class="container my__bg">
   <view class="my__profile">
     <image class="my__avatar" src="{{avatarUrl}}"></image>
-    <button wx:if="{{!hasUserInfo}}" class="my__login" plain="true" size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <!-- <button wx:if="{{!hasUserInfo}}" class="my__login" plain="true" size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button> -->
+    <button wx:if="{{!hasUserInfo}}" class="my__login" plain="true" size="mini" bindtap="getUserProfile">登录</button>
     <view wx:else>
       <text class="my__name">{{userInfo.nickName}}</text>
       <text wx:if="{{!hasPhone}}" class="my__tip" bindtap="open">绑定手机号 ></text>

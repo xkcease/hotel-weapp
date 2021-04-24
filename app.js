@@ -55,13 +55,26 @@ App({
 
     wx.getSetting({
       success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: res => {
-              this.globalData.userInfo = res.userInfo;
+        // if (res.authSetting['scope.userInfo']) {
+        //   wx.getUserInfo({
+        //     success: res => {
+        //       this.globalData.userInfo = res.userInfo;
+        //       console.log(res);
+        //     }
+        //   })
+        // }
+        wx.getUserProfile({
+          desc: 'login',
+          success: (res) => {
+            this.globalData.userInfo = res.userInfo;
+          },
+          fail: (err) => {
+            const userInfo = wx.getStorageSync('userInfo');
+            if (userInfo) {
+              this.globalData.userInfo = userInfo;
             }
-          })
-        }
+          }
+        })
       }
     });
   },

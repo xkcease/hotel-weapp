@@ -17,7 +17,7 @@
   <view class="m-b-180">
     <view class="order__block">
       <view class="order--flex">
-        <text>商品信息</text>
+        <text>房间信息</text>
       </view>
       <view class="order--flex order__content">
         <image src="{{ order.img }}" class="order__img"></image>

@@ -41,6 +41,28 @@ Page({
       console.log('pity');
     }
   },
+  getUserProfile() {
+    console.log(12);
+    wx.getUserProfile({
+      desc: 'login',
+      success: (res) => {
+        app.globalData.userInfo = res.userInfo;
+        this.setData({
+          userInfo: res.userInfo,
+          avatarUrl: res.userInfo.avatarUrl,
+          hasUserInfo: true,
+        });
+        wx.setStorageSync('userInfo', res.userInfo);
+
+        if (!app.globalData.phone) {
+          this.open();
+        }
+      },
+      fail: (err) => {
+        console.log(err)
+      }
+    })
+  },
   getPhoneNumber (e) {
     this.setData({
       show: false

@@ -40,7 +40,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.15.0",
+  "libVersion": "2.16.1",
   "appid": "wx1971e453a170476d",
   "projectname": "hotel-weapp",
   "debugOptions": {
